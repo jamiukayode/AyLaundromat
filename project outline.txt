@@ -1,0 +1,4 @@
+Banner, About us, service,
+contact, Address, Testimonial,
+map, privacy and policy, Faqs.
+Pricing, 

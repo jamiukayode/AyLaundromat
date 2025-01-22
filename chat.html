@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotless Laundry Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .cta-button {
+            background: #ff7f50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        form input, form textarea, form button {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #4facfe;
+            color: white;
+            border: none;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #map {
+            height: 300px;
+            background: #e0e0e0;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const map = document.getElementById("map");
+
+            if (map) {
+                map.innerHTML = "<p>Loading map...</p>";
+                setTimeout(() => {
+                    map.innerHTML = "<p>Map is currently unavailable. Please check back later.</p>";
+                }, 2000); // Simulating map load delay
+            }
+
+            const form = document.querySelector("form");
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                alert("Thank you for contacting us. We will get back to you shortly!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="home">
+        <nav class="navbar">
+            <div class="logo">Spotless Laundry</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Your Clothes, Cleaner Than Ever!</h1>
+            <p>Experience premium laundry services with free pickup & delivery.</p>
+            <a href="#contact" class="cta-button">Book a Pickup Now</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Washing & Drying</h3>
+                <p>We use top-notch machines to give your clothes the care they deserve.</p>
+            </div>
+            <div class="card">
+                <h3>Dry Cleaning</h3>
+                <p>Delicate fabrics? No problem! We handle them with the utmost care.</p>
+            </div>
+            <div class="card">
+                <h3>Ironing & Folding</h3>
+                <p>Perfectly pressed and neatly folded clothes delivered to your doorstep.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How do I schedule a pickup?</h3>
+            <p>Simply click the "Book a Pickup" button and fill in your details.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you offer same-day delivery?</h3>
+            <p>Yes! We provide same-day service for urgent requests.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What areas do you cover?</h3>
+            <p>We operate within a 20-mile radius of our location.</p>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location">
+        <h2>Our Location</h2>
+        <div id="map"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Spotless Laundry Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>
